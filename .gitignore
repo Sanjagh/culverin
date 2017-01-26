@@ -1,3 +1,5 @@
+
+*.swp
 *.class
 *.log
 
@@ -11,7 +13,10 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+project/project/
+project/target/
 
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
+.idea/
