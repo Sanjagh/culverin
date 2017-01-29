@@ -3,7 +3,7 @@ val akkaVersion = "2.4.16"
 
 lazy val commonSettings = Seq(
   organization := "co.saverin",
-  scalaVersion := "2.12.1"
+  scalaVersion := "2.11.8"
 )
 
 lazy val core = project.

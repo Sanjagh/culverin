@@ -20,3 +20,5 @@ project/target/
 .scala_dependencies
 .worksheet
 .idea/
+ensime.sbt
+.ensime_cache/
