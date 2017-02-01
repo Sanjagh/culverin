@@ -12,16 +12,6 @@
  :scala-version "2.11.8"
  :compiler-args ("-feature" "-deprecation" "-Xlint" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
  :subprojects ((
-   :name "client"
-   :source-roots ("/home/fahim/work/saverin/culverin/client/src/main/java" "/home/fahim/work/saverin/culverin/client/src/test/java" "/home/fahim/work/saverin/culverin/client/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/client/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/client/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/client/src/main/scala" "/home/fahim/work/saverin/culverin/client/src/test/scala" "/home/fahim/work/saverin/culverin/client/target/scala-2.11/src_managed/test")
-   :targets ("/home/fahim/work/saverin/culverin/client/target/scala-2.11/classes")
-   :test-targets ("/home/fahim/work/saverin/culverin/client/target/scala-2.11/test-classes")
-   :depends-on-modules ("core")
-   :compile-deps nil
-   :runtime-deps nil
-   :test-deps nil
-   :doc-jars ("/home/fahim/work/saverin/culverin/client/target/scala-2.11/client_2.11-0.0.1-javadoc.jar")
-   :reference-source-roots nil) (
    :name "core"
    :source-roots ("/home/fahim/work/saverin/culverin/core/src/main/java" "/home/fahim/work/saverin/culverin/core/src/test/java" "/home/fahim/work/saverin/culverin/core/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/core/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/core/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/core/src/main/scala" "/home/fahim/work/saverin/culverin/core/src/test/scala" "/home/fahim/work/saverin/culverin/core/target/scala-2.11/src_managed/test")
    :targets ("/home/fahim/work/saverin/culverin/core/target/scala-2.11/classes")
@@ -32,6 +22,16 @@
    :test-deps nil
    :doc-jars ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.4.16/akka-actor_2.11-2.4.16-javadoc.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.0/config-1.3.0-javadoc.jar" "/home/fahim/work/saverin/culverin/core/target/scala-2.11/core_2.11-0.0.1-javadoc.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0-javadoc.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-javadoc.jar")
    :reference-source-roots ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.4.16/akka-actor_2.11-2.4.16-sources.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.0/config-1.3.0-sources.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0-sources.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar")) (
+   :name "engine"
+   :source-roots ("/home/fahim/work/saverin/culverin/engine/src/main/java" "/home/fahim/work/saverin/culverin/engine/src/test/java" "/home/fahim/work/saverin/culverin/engine/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/engine/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/engine/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/engine/src/main/scala" "/home/fahim/work/saverin/culverin/engine/src/test/scala" "/home/fahim/work/saverin/culverin/engine/target/scala-2.11/src_managed/test")
+   :targets ("/home/fahim/work/saverin/culverin/engine/target/scala-2.11/classes")
+   :test-targets ("/home/fahim/work/saverin/culverin/engine/target/scala-2.11/test-classes")
+   :depends-on-modules ("core")
+   :compile-deps nil
+   :runtime-deps nil
+   :test-deps nil
+   :doc-jars ("/home/fahim/work/saverin/culverin/engine/target/scala-2.11/engine_2.11-0.0.1-javadoc.jar")
+   :reference-source-roots nil) (
    :name "root"
    :source-roots ("/home/fahim/work/saverin/culverin/src/main/java" "/home/fahim/work/saverin/culverin/src/test/java" "/home/fahim/work/saverin/culverin/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/src/main/scala" "/home/fahim/work/saverin/culverin/src/test/scala" "/home/fahim/work/saverin/culverin/target/scala-2.11/src_managed/test")
    :targets ("/home/fahim/work/saverin/culverin/target/scala-2.11/classes")
@@ -41,36 +41,8 @@
    :runtime-deps nil
    :test-deps nil
    :doc-jars ("/home/fahim/work/saverin/culverin/target/scala-2.11/root_2.11-0.0.1-javadoc.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-javadoc.jar")
-   :reference-source-roots ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar")) (
-   :name "server"
-   :source-roots ("/home/fahim/work/saverin/culverin/server/src/main/java" "/home/fahim/work/saverin/culverin/server/src/test/java" "/home/fahim/work/saverin/culverin/server/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/server/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/server/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/server/src/main/scala" "/home/fahim/work/saverin/culverin/server/src/test/scala" "/home/fahim/work/saverin/culverin/server/target/scala-2.11/src_managed/test")
-   :targets ("/home/fahim/work/saverin/culverin/server/target/scala-2.11/classes")
-   :test-targets ("/home/fahim/work/saverin/culverin/server/target/scala-2.11/test-classes")
-   :depends-on-modules ("core")
-   :compile-deps nil
-   :runtime-deps nil
-   :test-deps nil
-   :doc-jars ("/home/fahim/work/saverin/culverin/server/target/scala-2.11/server_2.11-0.0.1-javadoc.jar")
-   :reference-source-roots nil))
+   :reference-source-roots ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar")))
  :projects ((
-    :id (:project "client" :config "compile")
-    :depends ((:project "core" :config "compile"))
-    :sources ("/home/fahim/work/saverin/culverin/client/src/main/java" "/home/fahim/work/saverin/culverin/client/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/client/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/client/src/main/scala")
-    :targets ("/home/fahim/work/saverin/culverin/client/target/scala-2.11/classes")
-    :scalac-options ("-feature" "-deprecation" "-Xlint" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
-    :javac-options nil
-    :library-jars nil
-    :library-sources nil
-    :library-docs ("/home/fahim/work/saverin/culverin/client/target/scala-2.11/client_2.11-0.0.1-javadoc.jar")) (
-    :id (:project "client" :config "test")
-    :depends ((:project "core" :config "compile"))
-    :sources ("/home/fahim/work/saverin/culverin/client/src/test/java" "/home/fahim/work/saverin/culverin/client/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/client/src/test/scala" "/home/fahim/work/saverin/culverin/client/target/scala-2.11/src_managed/test")
-    :targets ("/home/fahim/work/saverin/culverin/client/target/scala-2.11/test-classes")
-    :scalac-options ("-feature" "-deprecation" "-Xlint" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
-    :javac-options nil
-    :library-jars nil
-    :library-sources nil
-    :library-docs nil) (
     :id (:project "core" :config "compile")
     :depends nil
     :sources ("/home/fahim/work/saverin/culverin/core/src/main/java" "/home/fahim/work/saverin/culverin/core/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/core/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/core/src/main/scala")
@@ -89,6 +61,24 @@
     :library-jars ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.4.16/akka-actor_2.11-2.4.16.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.0/config-1.3.0.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar")
     :library-sources ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.4.16/akka-actor_2.11-2.4.16-sources.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.0/config-1.3.0-sources.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0-sources.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar")
     :library-docs ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.4.16/akka-actor_2.11-2.4.16-javadoc.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.0/config-1.3.0-javadoc.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0-javadoc.jar" "/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-javadoc.jar")) (
+    :id (:project "engine" :config "compile")
+    :depends ((:project "core" :config "compile"))
+    :sources ("/home/fahim/work/saverin/culverin/engine/src/main/java" "/home/fahim/work/saverin/culverin/engine/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/engine/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/engine/src/main/scala")
+    :targets ("/home/fahim/work/saverin/culverin/engine/target/scala-2.11/classes")
+    :scalac-options ("-feature" "-deprecation" "-Xlint" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
+    :javac-options nil
+    :library-jars nil
+    :library-sources nil
+    :library-docs ("/home/fahim/work/saverin/culverin/engine/target/scala-2.11/engine_2.11-0.0.1-javadoc.jar")) (
+    :id (:project "engine" :config "test")
+    :depends ((:project "core" :config "compile"))
+    :sources ("/home/fahim/work/saverin/culverin/engine/src/test/java" "/home/fahim/work/saverin/culverin/engine/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/engine/src/test/scala" "/home/fahim/work/saverin/culverin/engine/target/scala-2.11/src_managed/test")
+    :targets ("/home/fahim/work/saverin/culverin/engine/target/scala-2.11/test-classes")
+    :scalac-options ("-feature" "-deprecation" "-Xlint" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
+    :javac-options nil
+    :library-jars nil
+    :library-sources nil
+    :library-docs nil) (
     :id (:project "root" :config "compile")
     :depends nil
     :sources ("/home/fahim/work/saverin/culverin/src/main/java" "/home/fahim/work/saverin/culverin/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/src/main/scala")
@@ -106,23 +96,5 @@
     :javac-options nil
     :library-jars ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar")
     :library-sources ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-sources.jar")
-    :library-docs ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-javadoc.jar")) (
-    :id (:project "server" :config "compile")
-    :depends ((:project "core" :config "compile"))
-    :sources ("/home/fahim/work/saverin/culverin/server/src/main/java" "/home/fahim/work/saverin/culverin/server/target/scala-2.11/src_managed/main" "/home/fahim/work/saverin/culverin/server/src/main/scala-2.11" "/home/fahim/work/saverin/culverin/server/src/main/scala")
-    :targets ("/home/fahim/work/saverin/culverin/server/target/scala-2.11/classes")
-    :scalac-options ("-feature" "-deprecation" "-Xlint" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
-    :javac-options nil
-    :library-jars nil
-    :library-sources nil
-    :library-docs ("/home/fahim/work/saverin/culverin/server/target/scala-2.11/server_2.11-0.0.1-javadoc.jar")) (
-    :id (:project "server" :config "test")
-    :depends ((:project "core" :config "compile"))
-    :sources ("/home/fahim/work/saverin/culverin/server/src/test/java" "/home/fahim/work/saverin/culverin/server/src/test/scala-2.11" "/home/fahim/work/saverin/culverin/server/src/test/scala" "/home/fahim/work/saverin/culverin/server/target/scala-2.11/src_managed/test")
-    :targets ("/home/fahim/work/saverin/culverin/server/target/scala-2.11/test-classes")
-    :scalac-options ("-feature" "-deprecation" "-Xlint" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
-    :javac-options nil
-    :library-jars nil
-    :library-sources nil
-    :library-docs nil))
+    :library-docs ("/home/fahim/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8-javadoc.jar")))
 )

@@ -13,24 +13,16 @@ lazy val core = project.
     libraryDependencies += "com.typesafe.akka" %% "akka-actor" % akkaVersion
   ).enablePlugins(JavaAppPackaging)
 
-lazy val server = project.
+lazy val engine = project.
   settings(commonSettings: _*).
   settings(
     version := "0.0.1"
   ).
-  dependsOn(core).
-  enablePlugins(JavaAppPackaging)
-
-lazy val client = project.
-  settings(commonSettings: _*).
-  settings(
-    version := "0.0.1"
-  ).
-  dependsOn(core).
-  enablePlugins(JavaAppPackaging)
+    dependsOn(core).
+    enablePlugins(JavaAppPackaging)
 
 lazy val root = (project in file(".")).
-    aggregate(core,server,client).
-    settings(
-      version := "0.0.1"
-    )
+  aggregate(core, engine).
+  settings(
+    version := "0.0.1"
+  )
