@@ -2,6 +2,8 @@
 *.swp
 *.class
 *.log
+draft.html
+
 
 # sbt specific
 .cache
