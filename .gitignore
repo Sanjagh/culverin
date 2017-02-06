@@ -1,8 +1,13 @@
 
+#Emacs specific
+*#
+draft.html
+user_stories.html
+
+
 *.swp
 *.class
 *.log
-draft.html
 
 
 # sbt specific
