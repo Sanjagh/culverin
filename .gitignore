@@ -29,3 +29,4 @@ project/target/
 .idea/
 ensime.sbt
 .ensime_cache/
+.ensime
