@@ -16,7 +16,7 @@ At the highest level, it has a DSL that helps the developers to define their gra
 - Watchers : Monitor counters based on user-defined rules to detect various events based on metrics
 - Actions : Pipe events (detected by watchers) to the outside world.
 
-# DSL
+## DSL
 (Under construction)
 
 ## Counters DSL
@@ -42,3 +42,15 @@ GroupCounter("status code")
 AverageAggregator("age")
 
 ```
+
+## Processors
+A processor is a unit that is responsible for extracting metrics from input (un-structured) data.
+Each processor has a specific rule that extracts it's target data structure from raw data.
+
+
+
+# Flow
+This section describes data flow from input through various components.
+
+## Basic Flow
+Basically, the process begins with a log chunk (or un-structured data). This raw data is processed in processor (matched against a set of rules) which results in a structured data object (e.g. an instance of a case class). Then it is routed through a router which decides which counters should be informed. Each counter is defined using a counter type (like the ones described above) and one (or more) function that converts a specific data structure (the result of a processor) into a basic data type that can be processed in the counter.
