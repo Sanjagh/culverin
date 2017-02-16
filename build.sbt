@@ -16,7 +16,11 @@ lazy val core = project.
 lazy val engine = project.
   settings(commonSettings: _*).
   settings(
-    version := "0.0.1"
+    version := "0.0.1",
+    libraryDependencies ++= Seq(
+      "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.5",
+      "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+    )
   ).
     dependsOn(core).
     enablePlugins(JavaAppPackaging)
