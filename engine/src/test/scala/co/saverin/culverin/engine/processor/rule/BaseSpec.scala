@@ -1,6 +1,7 @@
 package co.saverin.culverin.engine.processor.rule
 
 import org.scalatest._
+import scala.util.parsing.combinator.RegexParsers
 
 class BaseSpec extends FlatSpec with Matchers with Inside {
 
@@ -34,7 +35,7 @@ class BaseSpec extends FlatSpec with Matchers with Inside {
   }
 }
 
-object RuleTester extends Base {
+object RuleTester extends RegexParsers with Base {
 
   val baseTest: Parser[String] = int ~ long ~ float ~ double ~ boolean ^^ { case i ~ l ~ f ~ d ~ b => s"$i $l $f $d $b" }
 }
