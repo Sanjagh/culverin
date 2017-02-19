@@ -2,7 +2,8 @@ package co.saverin.culverin.engine.processor.rule
 
 import scala.util.parsing.combinator.RegexParsers
 
-trait Base extends RegexParsers {
+trait Base {
+  self: RegexParsers =>
 
   val int: Parser[Int] = """\d+""".r ^^ { _.toInt }
   val long: Parser[Long] = """\d+""".r ^^ { _.toLong }
@@ -17,5 +18,4 @@ trait Base extends RegexParsers {
   /** Alphanumeric with digits, dash and underline */
   val id: Parser[String] = """[a-zA-Z0-9_-]""".r ^^ { _.toString }
 
-  
 }
