@@ -2,7 +2,7 @@ package co.saverin.culverin.engine.processor.rule
 
 import scala.util.parsing.combinator.RegexParsers
 
-trait Base {
+trait BaseRule {
   self: RegexParsers =>
 
   val int: Parser[Int] = """\d+""".r ^^ { _.toInt }
