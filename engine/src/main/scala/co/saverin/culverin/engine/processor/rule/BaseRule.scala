@@ -16,6 +16,6 @@ trait BaseRule {
   val identifier: Parser[String] = """[a-zA-Z0-9_]+""".r ^^ { _.toString }
   val boolean: Parser[Boolean] = """[Tt]rue|[Ff]alse""".r ^^ { _.toString.toLowerCase.toBoolean }
   /** Alphanumeric with digits, dash and underline */
-  val id: Parser[String] = """[a-zA-Z0-9_-]""".r ^^ { _.toString }
+  val id: Parser[String] = """[a-zA-Z0-9_-]+""".r ^^ { _.toString }
 
 }

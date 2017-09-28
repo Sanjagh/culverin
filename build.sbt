@@ -13,6 +13,17 @@ lazy val core = project.
     libraryDependencies += "com.typesafe.akka" %% "akka-actor" % akkaVersion
   ).enablePlugins(JavaAppPackaging)
 
+lazy val agent = project.
+  settings(commonSettings: _*).
+  settings(
+    version := "0.0.1",
+    libraryDependencies ++= Seq(
+            "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+    )
+  ).
+  dependsOn(core).
+  enablePlugins(JavaAppPackaging)
+
 lazy val engine = project.
   settings(commonSettings: _*).
   settings(
